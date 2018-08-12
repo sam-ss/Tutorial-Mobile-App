@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+ #accordion .panel-heading{
+background-color:	black;
+color:white;
+ }
+ #accordion .panel-body{
+ font-weight:bold;
+font-size:16px;
+ }
+  .container{
+background-color:lightslategray;
+ }
+  a{
+  font-weight:bold;
+  }
+ 
+  </style>
+<div class="container">
+<br/>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="text-decoration:none; ">1) What is PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body" ><i style="color:green">PHP</i> is a web language based on scripts that allow developers to dynamically create generated web pages.</div>
+      </div>
+    </div>
+	
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="text-decoration:none;">2) What do the initials of PHP stand for?</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body" >
+		PHP means PHP: <i style="color:green">Hypertext Preprocessor</i>.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="text-decoration:none;">3) Which programming language does PHP resemble?</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">PHP syntax resembles <i style="color:green">Perl</i> and <i style="color:green">C</i></div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="text-decoration:none;">4) What is the main difference between PHP 4 and PHP 5?</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">PHP 5 presents many additional <i style="color:green">OOP (Object Oriented Programming)</i> features.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="text-decoration:none;">5) Is multiple inheritance supported in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">PHP <i style="color:green">supports</i> only <i style="color:green">single inheritance</i>; it means that a class can be extended from only one single class using the keyword 'extended'.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="text-decoration:none;">6) What is the meaning of a final class and a final method?</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i style="color:green">'final'</i> is introduced in PHP5.<i style="color:green"> Final class</i> means that this class cannot be extended and a <i style="color:green">final method </i>cannot be overridden.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="text-decoration:none;">7) What is the difference between == and === operator in PHP ?</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">In PHP <i style="color:green">==</i> is equal operator and returns TRUE if $a is equal to $b after type juggling and<i style="color:green"> ===</i> is Identical operator and return TRUE if $a is equal to $b, and they are of the same data type.
+	
+	<b>Example Usages:</b><br/>
+	<xmp>	
+
+<?php 
+   $a=true ;
+   $b=1;
+  /* Below condition returns
+   true and prints a and b
+   are equal */
+   if($a==$b){
+    echo "a and b are equal";
+   }else{
+  echo "a and b are not	equal";
+   }
+  /*Below condition returns
+  false and prints a and b 
+  are not equal because
+  $a and $b are of  different
+  data types.*/
+   if($a===$b){
+ echo "a and b are equal";
+   }else{
+ echo "a and b are not equal";
+   }
+?> 
+</xmp>
+</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="text-decoration:none;"> 8) What is session in PHP. How to remove data from a session?</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body" >
+		As HTTP is state protocol.To maintain states on server and share data across multiple pages PHP session are used.PHP sessions are simple way to store data for individual users/client against a unique session ID.Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve existing session data,if session id is not present on server PHP creates a new session, and generate a new session ID.
+	<br/>
+	<b>Example Usage:-</b><br/>
+<xmp>
+
+<?php 
+//starting a session
+session_start();
+//Creating a session 
+$_SESSION['user_info']=
+['user_id'=>1,'first_name'=>
+'php','last_name'=>'scots',
+'status'=>'active'];
+
+//checking session
+if(isset($_SESSION['user_info']))
+{
+echo "logged In";
+}
+
+//un setting remove a value
+ from session
+unset($_SESSION['user_info']
+['first_name']);
+
+// destroying complete session
+session_destroy();
+
+?>
+
+</xmp>
+	</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="text-decoration:none;">9) What are constructor and destructor in PHP ?</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body">
+		PHP <i style="color:green">constructor</i> and a <i style="color:green">destructor</i> are special type functions which are automatically called when a PHP class object is <i style="color:red">created</i> and <i style="color:red"> destroyed</i>.
+
+Generally<i style="color:green"> Constructor</i> are used to intializes the private variables for class and <i style="color:green">Destructors</i> to free the resources created /used by class .
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" style="text-decoration:none;">10) List data types in PHP ?</a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <div class="panel-body">
+		PHP supports 9 primitive types<br/><br/>
+    4<i style="color:green"> scalar types:</i><br/><br/>
+      a) integer<br/>
+      b) boolean<br/>
+      c) float<br/>
+      d) string<br/>
+    3 <i style="color:green">compound types:</i><br/><br/>
+
+   a) array<br/>
+   b) object<br/>
+   c) callable<br/>
+   
+And 2 <i style="color:green">special types:</i><br/><br/>
+
+   a) resource<br/>
+   b) NULL<br/>
+  
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse11" style="text-decoration:none;">11) What is the difference between unset and unlink ?</a>
+        </h4>
+      </div>
+      <div id="collapse11" class="panel-collapse collapse">
+        <div class="panel-body">
+<i style="color:green">Unlink:</i> Is used to remove a file from server.<br/>
+usage:unlink(‘path to file’);<br/><br/>
+
+<i style="color:green">Unset:</i> Is used unset a variable.<br/>
+usage: unset($var);
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse12" style="text-decoration:none;">12) Explain the difference b/w static and dynamic websites?</a>
+        </h4>
+      </div>
+      <div id="collapse12" class="panel-collapse collapse">
+        <div class="panel-body">
+		In <i style="color:green">static websites</i>, content can't be changed after running the script. You can't change anything in the site. It is predefined.<br/>
+
+In <i style="color:green">dynamic websites</i>, content of script can be changed at the run time. Its content is regenerated every time a user visit or reload. Google, yahoo and every search engine is the example of dynamic website.
+		</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse13" style="text-decoration:none;">13) What are the popular frameworks in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse13" class="panel-collapse collapse">
+        <div class="panel-body">
+		
+		> CakePHP<br/>
+        > CodeIgniter<br/>
+        > Laravel<br/>
+		> Yii 2<br/>
+        > Symfony<br/>
+        > Zend Framework etc.<br/>
+		
+		
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse14" style="text-decoration:none;">14) What is "echo" in PHP??</a>
+        </h4>
+      </div>
+      <div id="collapse14" class="panel-collapse collapse">
+        <div class="panel-body">
+		PHP <i style="color:green">echo</i> output one or more string. It is a language construct not a function. So use of parentheses is not required. But if you want to pass more than one parameter to echo, use of parentheses is required.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse15" style="text-decoration:none;">15) What is "print" in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse15" class="panel-collapse collapse">
+        <div class="panel-body">
+PHP <i style="color:green">print</i> output a string. It is a language construct not a function. So use of parentheses is not required with the argument list. Unlike echo, it always returns 1.
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse16" style="text-decoration:none;">16) What is the difference between "echo" and "print" in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse16" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:green">Echo </i>can output one or more string but <i style="color:green">Print </i> can only output one string and always <i style="color:green">returns 1</i>.<br/>
+
+<i style="color:green">Echo </i> is faster than <i style="color:green">Print </i> because it does not return any value.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse17" style="text-decoration:none;">17) What is the use of count() function in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse17" class="panel-collapse collapse">
+        <div class="panel-body">The PHP <i style="color:green">count()</i> function is used to count total elements in the array, or something an object.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse18" style="text-decoration:none;">18) What is the use of header() function in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse18" class="panel-collapse collapse">
+        <div class="panel-body" >
+		The <i style="color:green">header()</i> function is used to send a raw HTTP header to a client. It must be called before sending the actual output. For example, you can't print any HTML element before using this function.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse19" style="text-decoration:none;">19) What does isset() function?</a>
+        </h4>
+      </div>
+      <div id="collapse19" class="panel-collapse collapse">
+        <div class="panel-body">The <i style="color:green">isset()</i> function checks if the variable is defined and not null.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse20" style="text-decoration:none;">20) What is the array in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse20" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i style="color:green">Array</i> is used to store multiple values in single value. In PHP, it orders maps of pairs of keys and values. It stores the collection of data type.
+		</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse21" style="text-decoration:none;">21) How many types of array are there in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse21" class="panel-collapse collapse">
+        <div class="panel-body">
+    There are three types of <i style="color:green">array</i> in PHP:<br/>
+
+      1)<i style="color:green"> Indexed array</i><br/>
+      2<i style="color:green">Associative array</i><br/>
+      3)<i style="color:green">Multidimensional array</i><br/>
+		
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse22" style="text-decoration:none;">22) How to get the length of string?</a>
+        </h4>
+      </div>
+      <div id="collapse22" class="panel-collapse collapse">
+        <div class="panel-body">
+		The <i style="color:green">strlen()</i> function is used to get the length of string.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse23" style="text-decoration:none;">23) Explain some of the PHP string functions?</a>
+        </h4>
+      </div>
+      <div id="collapse23" class="panel-collapse collapse">
+        <div class="panel-body">
+		There are many array functions in PHP:<br/>
+
+         * strtolower()<br/>
+         * strtoupper()<br/>
+         * ucfirst()<br/>
+         * lcfirst()<br/>
+         * ucwords()<br/>
+         * strrev()<br/>
+         * strlen()<br/>
+		
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse24" style="text-decoration:none;">24) What are the methods to submit form in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse24" class="panel-collapse collapse">
+        <div class="panel-body">There are two methods <i style="color:green">GET</i> and <i style="color:green">POST</i>.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse25" style="text-decoration:none;">25) How can you submit a form without a submit button?</a>
+        </h4>
+      </div>
+      <div id="collapse25" class="panel-collapse collapse">
+        <div class="panel-body">
+		You can use <i style="color:green">JavaScript submit()</i> function to submit the form without explicitly clicking any submit button.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse26" style="text-decoration:none;">26) What are the ways to include file in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse26" class="panel-collapse collapse">
+        <div class="panel-body">
+		PHP allows you to include file so that page content can be reused again. There are two ways to include file in PHP.<br/><br/>
+
+           1) <i style="color:green">include</i><br/>
+           2)<i style="color:green"> require</i><br/>
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse27" style="text-decoration:none;">27) Differentiate between require and include?</a>
+        </h4>
+      </div>
+      <div id="collapse27" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i style="color:green">Require</i> and <i style="color:green">include</i> both are used to include a file, but if file is not found <i style="color:green">include</i> sends <i style="color:red">warning</i> whereas <i style="color:green">require</i> sends <i style="color:red">Fatal error</i>.
+		
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse28" style="text-decoration:none;">28) What is the difference between session and cookie?</a>
+        </h4>
+      </div>
+      <div id="collapse28" class="panel-collapse collapse">
+        <div class="panel-body" >
+		The main difference between session and cookie is that cookies are stored on user's computer in the text file format while sessions are stored on the server side.<br/><br/>
+
+<i style="color:green">Cookies</i> <i style="color:red">can't</i> hold multiple variables on the other hand <i style="color:green">Session</i> <i style="color:red">can</i> hold multiple variables.<br/>
+
+You can manually set an expiry for a <i style="color:green">cookie</i>, while <i style="color:green">session </i>only remains active as long as browser is open.
+		
+		</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse29" style="text-decoration:none;">29) How to read a file in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse29" class="panel-collapse collapse">
+        <div class="panel-body">PHP provides various functions to read data from file. There are different functions that allow you to read all file data, read data line by line and read data character by character.
+<br/><br/>
+         PHP file read functions are given below:<br/>
+
+             1)<i style="color:green"> fread()</i><br/>
+             2) <i style="color:green">fgets()</i><br/>
+             3)<i style="color:green"> fgetc()</i><br/>
+			  </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse30" style="text-decoration:none;">30) How to upload file in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse30" class="panel-collapse collapse">
+        <div class="panel-body">
+		The <i style="color:green"> move_uploaded_file()</i> function is used to upload file in PHP.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse31" style="text-decoration:none;">31) How to download file in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse31" class="panel-collapse collapse">
+        <div class="panel-body">The <i style="color:green">readfile()</i> function is used to <i style="color:green">download</i> file in PHP.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse32" style="text-decoration:none;">32) How can you send email in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse32" class="panel-collapse collapse">
+        <div class="panel-body">The <i style="color:green">mail()</i> function is used to send email in PHP.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse33" style="text-decoration:none;">33) How do you connect MySQL database with PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse33" class="panel-collapse collapse">
+        <div class="panel-body" >There are two methods to connect MySQL database with PHP. Procedural and object oriented style.<br/><br/>
+		How to <i style="color:red">create connection</i> in PHP?<br/><br/>
+        The <i style="color:green">mysqli_connect()</i> function is used to create connection in PHP.
+		
+		
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse34" style="text-decoration:none;">34) How to create database connection and query in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse34" class="panel-collapse collapse">
+        <div class="panel-body">
+		Since <i style="color:red">PHP 4.3, mysql_reate_db() </i>is deprecated. Now you can use following 2 alternatives.<br/><br/>
+
+          1)<i style="color:green"> mysqli_query()</i><br/>
+          2) <i style="color:green">PDO::_query()</i><br/>>
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse35" style="text-decoration:none;">35) What is htaccess in PHP?</a>
+        </h4>
+      </div>
+      <div id="collapse35" class="panel-collapse collapse">
+        <div class="panel-body">The <i style="color:green">.htaccess</i> is a configuration file on Apache server. You can change configuration settings using directives in Apache configuration files like .htaccess and httpd.conf.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse36" style="text-decoration:none;">36) Explain PHP explode() function ?</a>
+        </h4>
+      </div>
+      <div id="collapse36" class="panel-collapse collapse">
+        <div class="panel-body">The PHP <i style="color:green">explode()</i> function breaks a string into an array.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse37" style="text-decoration:none;">37) Explain PHP split() function.</a>
+        </h4>
+      </div>
+      <div id="collapse37" class="panel-collapse collapse">
+        <div class="panel-body">The PHP <i style="color:green">split()</i> function splits string into an array by regular expression.
+
+</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse38" style="text-decoration:none;">38) What is the function file_get_contents() useful for?</a>
+        </h4>
+      </div>
+      <div id="collapse38" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i style="color:green">file_get_contents()</i> lets reading a file and storing it in a string variable.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse39" style="text-decoration:none;">39) What is the difference between mysqli_fetch_object() and mysqli_fetch_array()?</a>
+        </h4>
+      </div>
+      <div id="collapse39" class="panel-collapse collapse">
+        <div class="panel-body">
+		
+		The <i style="color:green"> mysqli_fetch_object()</i> function collects the first single matching record where<br/>
+		<i style="color:green">mysqli_fetch_array()</i> collects all matching records from the table in an array.
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse40" style="text-decoration:none;">40) How do I check if a given variable is empty?</a>
+        </h4>
+      </div>
+      <div id="collapse40" class="panel-collapse collapse">
+        <div class="panel-body">If we want to check whether a variable has a value or not, it is possible to use the <i style="color:green">empty()</i> function.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse41" style="text-decoration:none;">41) what is the difference between for and foreach?</a>
+        </h4>
+      </div>
+      <div id="collapse41" class="panel-collapse collapse">
+        <div class="panel-body">
+		
+		<i style="color:green">for</i> is expressed as follows:<br/>
+
+         <i style="color:green">for (expr1; expr2; expr3)</i><br/>
+
+statement:<br/>
+
+The first expression is executed once at the beginning. In each iteration, expr2 is evaluated. If it is TRUE, the loop continues, and the statements inside for are executed. If it evaluates to FALSE, the execution of the loop ends. expr3 is tested at the end of each iteration.<br/><br/>
+
+However,<i style="color:green"> foreach</i> provides an easy way to iterate over arrays, and it is only used with <i style="color:green">arrays</i> and <i style="color:green">objects</i>.
+		</div>
+      </div>
+    </div>
+	
+  </div> 
+</div>
+    
+</body>
+</html>

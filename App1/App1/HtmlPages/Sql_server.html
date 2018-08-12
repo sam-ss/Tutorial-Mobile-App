@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+ #accordion .panel-heading{
+background-color:	black;
+color:white;
+ }
+ #accordion .panel-body{
+ font-weight:bold;
+font-size:16px;
+ }
+  .container{
+background-color:lightslategray;
+ }
+ i{
+color:green;
+font-weight:bold;
+ }
+ a{
+  font-weight:bold;
+  }
+ 
+  </style>
+<div class="container">
+<br/>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="text-decoration:none; ">1) What is a database?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body" > A <i>database</i> is described as an organized way of <i>collection of DATA</i>. It is the collection of schemes, tables, queries, reports, views and other objects. 
+<br/><i>Syntax</i>: CREATEDATABASEDatabaseName<br/>
+<i>Example</i>: CREATEDATABASE Student
+		</div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="text-decoration:none;">2) What is SQL?</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body" >
+		 <i>Structured Query Language</i>, also known as <i>SQL</i>, is a programming language designed for <i>managing Relational Database Management Systems (RDBMSs)</i>. SQL is an International Organization for Standardization (ISO) standard. 
+<br/><br/>
+In RDBMS all the data is stored in tables with each table consisting of rows and columns. 
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="text-decoration:none;">3) What is RDBMS?</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i>RDBMS</i>: It is referred as Relation Database Management Systems (RDBMS).<br/><br/>
+
+<i>RDBMS</i> possesses a set of the below given characteristics:</br>
+<i>Write-intensive operations:</i> The RDBMS is frequently written to and is often used in transaction-oriented applications.<br/>
+<i>Data in flux or historical data:</i> The RDBMS is designed to handle frequently changing data. Alternatively, RDBMS can also store vast amounts of historical data, which can later be analyzed or "mined".<br/>
+<i>Application-specific schema:</i> The RDBMS is configured on a per-application basis and a unique schema exists to support each application.<br/>
+Complex data models. The relational nature of the RDBMS makes it suitable for handling sophisticated, complex data models that require many tables, foreign key values, complex join operations, and so on.<br/>
+<i>Data integrity:</i> The RDBMS features many components designed to ensure data integrity. This includes rollback operations, referential integrity, and transaction-oriented operations.<br/>
+		
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="text-decoration:none;">4) How to create a table in SQL?</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body"><i>SQL</i> provides an organized way for table creation:<br/><br/>
+		Syntax:<br/>
+		<div class="panel panel-default">
+  <div class="panel-body">
+  Create table TableName (columnName1 datatype, columnName2 datatype ) 
+  </div>
+  </div>
+		<div class="panel panel-default">
+  <div class="panel-body">
+  <xmp>
+  <i>create table</i> Info   
+(   
+   Name <i>varchar</i>(20),   
+   BirthDate <i>date</i>,   
+   Phone <i>nvarchar</i>(12),   
+   City <i>varchar</i>(20)   
+)   
+</xmp>
+  </div>
+  </div>
+		
+		</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="text-decoration:none;">5) How to delete a table in SQL Server?</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body"><i>Delete </i>Data Record from Database Table and deleting an existing table by the following method:<br/><br/>
+		
+		<i>Syntax:</i> To delete all table records of a table:<br/><br/>
+     -> Delete TableName<br/>
+	 Ex:<br/>
+     -> DELETE info
+</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="text-decoration:none;">6) How to update a database table using SQL?</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+		To <i>update</i> an existing Table we use SQL Command UPDATE: It will update the records as per user defined query/need.<br/><br/>
+		Syntax:<br/><br/>
+		=> Update TableName SET ColumnName = NewData where Condition  <br/><br/>
+        Example:<br/><br/>
+		=> Update info Set City = 'Baroda' where id = 2   
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="text-decoration:none;">7)  What is a database relationship?</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body"><i>Relationships </i>are created by linking the column in one table with the column in another table. There are four different types of relationship that can be created.
+		<br/><br/>
+		The relationships are listed below:<br/>
+1) One to One Relationship<br/>
+2) Many to One relationship<br/>
+3) Many to Many relationship<br/>
+4) One to One relationship<br/>
+
+</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="text-decoration:none;">8)  What is a primary key of a database?</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body" >
+		<i>Primary key:</i><br/> 
+
+A table column with this constraint is called the key column for the table. This constraint helps the table to make sure that the value is not repeated and also that there are no null entries.<br/>
+Now this column does not allow null values and duplicate values. You can try inserting values to violate these conditions and see what happens. A table can have only one Primary key. Multiple columns can participate on the primary key. 
+		</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="text-decoration:none;">9) What is a foreign key of a database?</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body">To define the relationship between two tables (one is called parent and the other one is the child table) connected by columns, a foreign key constraint is used. In this constraint the values of the child table must appear in the parent table, which means that for a foreign key, one table should point to a Primary Key in another table. A table can have multiple foreign keys and each foreign key can have a different referenced table.
+		<br/></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" style="text-decoration:none;">10) What is database normalization?</a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <div class="panel-body">
+		Database <i>normalization</i> is the process of organizing the fields and tables of a relational database to minimize redundancy and dependency. Normalization usually involves dividing large tables into smaller (and less redundant) tables and defining relationships among them. Normalization is a bottom-up technique for database design.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse11" style="text-decoration:none;">11) What is a stored procedure?</a>
+        </h4>
+      </div>
+      <div id="collapse11" class="panel-collapse collapse">
+        <div class="panel-body">A <i>Stored Procedure</i> is a collection or a group of T-SQL statements. Stored Procedures are a precompiled set of one or more statements that are stored together in the database. They reduce the network load because of the <i>precompilation</i>. We can create a Stored Procedure using the <i>"Create proc"</i> statement.
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse12" style="text-decoration:none;">12) What is a trigger in SQL Server?</a>
+        </h4>
+      </div>
+      <div id="collapse12" class="panel-collapse collapse">
+        <div class="panel-body">"A <i>Trigger</i> is a Database object just like a stored procedure or we can say it is a special kind of Stored Procedure which <i>fires</i> when an <i>event occurs </i>in a database.".<br/>
+
+It is a database object that is bound to a table and is executed automatically. We cannot explicitly call any trigger. Triggers provide data integrity and used to access and check data before and after modification using DDL or DML query.
+</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse13" style="text-decoration:none;">13) What is an index?</a>
+        </h4>
+      </div>
+      <div id="collapse13" class="panel-collapse collapse">
+        <div class="panel-body">An <i>Index </i>is one of the most powerful techniques to work with this enormous information. Database tables are not enough for getting the data efficiently in case of a huge amount of data. In order to get the data quickly we need to index the column in a table.<br/>
+
+An <i>index</i> is a database object that is created and maintained by the DBMS. Indexed columns are ordered or sorted so that data searching is extremely fast. An index can be applied on a column or a view. A table can have more than one index.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse14" style="text-decoration:none;">14) What is a join in SQL Server?</a>
+        </h4>
+      </div>
+      <div id="collapse14" class="panel-collapse collapse">
+        <div class="panel-body">
+		 If You want to <i>retrieve data from multiple tables</i> then you need to use <i>joins</i> in SQL Server. Joins are used to get data from two or more tables based on the relationships among some of the columns in the tables.
+
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse15" style="text-decoration:none;">15) What are different types of joins in SQL Server?</a>
+        </h4>
+      </div>
+      <div id="collapse15" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i>Joins</i> are useful for bringing data together from different tables based on their database relations. First we will see how the join operates between tables. Then we will explore the Order of Execution when both a join and a where condition exist. Finally we will move our exploration to the importance of the Join order.<br/>
+<br/>
+A <i>Join</i> condition defines a way two tables are related in a query by : <br/>
+1) Specifying the column to be used for the Join from each table. In joining foreign keys in a table and its associated key in the other table.<br/>
+2) To use the logical operator in comparing values from the columns.</br></br>
+There are three type of joins available based on the way we join columns of two different tables.<br/>
+
+1) Full Join<br/>
+2) Inner Join<br/>
+3) Left outer Join<br/>
+4) Right outer Join<br/>
+		
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse16" style="text-decoration:none;">16) What is replication in SQL Server?</a>
+        </h4>
+      </div>
+      <div id="collapse16" class="panel-collapse collapse">
+        <div class="panel-body"><i>Replication</i> is a process or method to synchronize the data across multiple servers. Replication is done by a replica set. A replication maintain the same data set. Replica sets provide redundancy and high availability with multiple copies of data on different database servers. <br/>
+
+<i>Replication</i> removes dependencies from a single server so replication protects a database from the loss of a single server. Replication provides a mechanism to recover from hardware failure and service interruptions. <br/>
+
+<i>Replication</i> is also used to increase the read capacity</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse17" style="text-decoration:none;">17) What is a check in SQL?</a>
+        </h4>
+      </div>
+      <div id="collapse17" class="panel-collapse collapse">
+        <div class="panel-body">A <i>Check Constraint</i> is a rule that identifies valid values for columns of data. A Check Constraint helps to enforce Domain Integrity. If the condition in a Check Constraint is not satisfied then it prevents the value from entering into the database.<br/>
+		<div class="panel panel-default">
+  <div class="panel-body">
+  <i>create table</i> emp(empId int check(empId >10),empName <i>varchar</i>(15))   
+  </div></div>
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse18" style="text-decoration:none;">18) What is a constraint in SQL?</a>
+        </h4>
+      </div>
+      <div id="collapse18" class="panel-collapse collapse">
+        <div class="panel-body" >
+		<i>Constraints</i> are the rules that decide what kind of data can enter into the database tables. SQL server has six types of constraints and we will explore all these constraints here with suitable examples. The constraints that we are going to explore are listed below:<br/><br/>
+1) Primary Key Constraint<br/>
+2) Foreign Key Constraint<br/>
+3) Not Null Constraint<br/>
+4) Unique constraint<br/>
+5) Default Constraint<br/>
+6) Check Constraint<br/>
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse19" style="text-decoration:none;">19) What is the difference between COMMIT and ROLLBACK?</a>
+        </h4>
+      </div>
+      <div id="collapse19" class="panel-collapse collapse">
+        <div class="panel-body">Every statement between<i> BEGIN</i> and <i>COMMIT </i>becomes persistent to database when the <i>COMMIT</i> is executed. Every statement between <i>BEGIN </i>and <i>ROOLBACK</i> are reverted to the state when the <i>ROLLBACK</i> was executed.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse20" style="text-decoration:none;">20) What is the difference between clustered and a non-clustered index?</a>
+        </h4>
+      </div>
+      <div id="collapse20" class="panel-collapse collapse">
+        <div class="panel-body"> A <i>clustered index</i> is an index that <i>rearranges </i>the table in the order of index itself. Its leaf nodes contain data pages. A table can have<i> only one clustered index</i>.<br/>
+
+A <i>non-clustered index</i> is an index that <i>does not re-arranges</i> the table in the order of index itself. Its leaf nodes contain index rows instead of data pages. A table can have <i>many non-clustered indexes</i>.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse21" style="text-decoration:none;">21) What’s the difference between a primary key and a unique key?</a>
+        </h4>
+      </div>
+      <div id="collapse21" class="panel-collapse collapse">
+        <div class="panel-body">The differences between primary key and a unique key are:<br/>
+
+=> The <i>primary key</i> is a column whose values uniquely identify every row in a table. Primary key values can never be reused. They create a clustered index on the column and <i>cannot be null</i>.</br>
+=> A <i>Unique key </i>is a column whose values also uniquely identify every row in a table but they create a non-clustered index by default and it <i>allows one NULL only</i>.</div>
+      </div>
+    </div>
+	
+	
+  </div> 
+</div>
+    
+</body>
+</html>

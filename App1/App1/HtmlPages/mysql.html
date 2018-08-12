@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+ #accordion .panel-heading{
+background-color:	darkslategray;
+color:white;
+ }
+ #accordion .panel-body{
+ font-weight:bold;
+font-size:16px;
+ }
+  .container{
+background-color:lightslategray;
+ }
+ a{
+  font-weight:bold;
+  }
+  </style>
+<div class="container">
+<br/>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="text-decoration:none; ">1) What is MySQL?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body" ><i style="color:green">MySQL</i> is a multithreaded, multi-user SQL database management system.This is the world's second most popular and widely used open source database.</div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="text-decoration:none;">2) In which language MySQL is written?</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body" >
+		<i style="color:green">MySQL</i> is written in <i style="color:green">C </i>and<i style="color:green"> C++</i> and its <i style="color:green">SQL parser</i>> is written in <i style="color:green">yacc.</i>
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="text-decoration:none;">3) What is the difference between MySQL and SQL?</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:green">SQL </i>is known as <i style="color:green">standard query language</i>. It is used to interact with the database like MySQL.<i style="color:green"> MySQL</i> is a database that stores various types of data and keeps it safe.
+<br/>
+A PHP script is required to store and retrieve the values inside the database.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="text-decoration:none;">4) What is the difference between CHAR and VARCHAR?</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">A list of differences between CHAR and VARCHAR:<br/></br/>
+
+<i style="color:green">CHAR</i> and <i style="color:green">VARCHAR</i> types are different in storage and retrieval.<br/>
+CHAR column length is fixed to the length that is declared while creating table. The length value ranges from 1 and 255.</br>
+When CHAR values are stored then they are right padded using spaces to specific length. Trailing spaces are removed when CHAR values are retrieved.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" style="text-decoration:none;">5) What is the difference between TRUNCATE and DELETE in MySQL?</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">The <i style="color:green">DELETE</i> command is used to <i style="color:green">delete data</i> from a table. It only deletes the rows of data from the table while,
+		<i style="color:green">truncate</i> is very dangerous command and should be used carefully because it <i style="color:green">deletes every row permanently</i> from a table.</div>
+      </div>
+    </div>
+	  <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" style="text-decoration:none;">6) What is a trigger in MySQL?</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">A <i style="color:green">trigger</i> is a set of codes that executes in response to some events.</div>
+      </div>
+    </div>	
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" style="text-decoration:none;">7) How many Triggers are possible in MySQL?</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+		There are only <i style="color:green">six Triggers</i> allowed to use in MySQL database.<br/><br/>
+
+1) Before Insert<br/>
+2) After Insert<br/>
+3) Before Update<br/>
+4) After Update<br/>
+5) Before Delete<br/>
+6) After Delete<br/>
+		</div>
+      </div>
+    </div>
+  
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" style="text-decoration:none;">8) What is the difference between heap table and temporary table?</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body" >
+		<b><i style="color:green">Heap tables:</i></b><br/><br/>
+
+<i style="color:green">Heap </i>tables are found in memory. They are used for high speed storage on temporary basis. They do not allow BLOB or TEXT fields.<br/>
+
+<i style="color:green">Heap</i> tables do not support <i style="color:green">AUTO_INCREMENT</i>.<br/>
+
+<i style="color:green">Indexes</i> should be <i style="color:green">NOT NULL<i>.<br/>
+
+<b><i style="color:green">Temporary tables:</i><b/><br/><br/>
+
+The <i style="color:green">temporary</i> tables are used to keep the <i style="color:red">temporary data</i>. Sometimes it is very useful in cases to keep temporary data. Temporary table is deleted after current client session terminates.<br/>
+
+<b><i style="color:green">Main differences:</i></b><br/>
+
+The <i style="color:green">heap</i> tables are shared among clients while temporary tables are not shared.<br/>
+
+Heap tables are just another storage engine, while for temporary tables you need a special privilege (create temporary table).<br/>
+		
+		
+		</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" style="text-decoration:none;">9) What is the difference between FLOAT and DOUBLE?</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:green">FLOAT</i> stores floating point numbers with accuracy up to <i style="color:red">8 places</i> and allocates <i style="color:red">4 bytes</i>, on the other hand <i style="color:green">DOUBLE</i> stores floating point numbers with accuracy up to <i style="color:red">18 places</i> and allocates <i style="color:red">8 bytes</i>.
+
+</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" style="text-decoration:none;">10) What is the difference between MySQL_connect and MySQL_pconnect?</a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i style="color:green"><b>Mysql_connect:</b></i><br/><br/>
+
+It opens a new connection to the database.<br/>
+Every time you need to open and close database connection, depending on the request.<br/>
+Opens page every time when it loaded.<br/><br/>
+<i style="color:green"><b>Mysql_pconnect:</b></i><br/><br/>
+
+In <i style="color:green"><b>Mysql_pconnect</b></i>, <i style="color:red"><b>"p" </b></i>stands for persistent connection so it opens the <i style="color:green"><b>persistent connection</b></i>.<br/>
+the database connection can not be closed.<br/>
+it is more useful if your site has more traffic because there is no need to open and close connection frequently and every time when page is loaded.<br/>
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse11" style="text-decoration:none;">11) How to get the current date in MySQL?</a>
+        </h4>
+      </div>
+      <div id="collapse11" class="panel-collapse collapse">
+        <div class="panel-body">To <i style="color:green"><b>get current date</b></i>, use the following syntax:<br/>
+		<i style="color:red"><b>SELECT CURRENT_DATE();  </b></i>
+		</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse12" style="text-decoration:none;">12) How to display Nth highest salary from a table in a MySQL query?</a>
+        </h4>
+      </div>
+      <div id="collapse12" class="panel-collapse collapse">
+        <div class="panel-body">Let us take a table named  <i style="color:green"><b>employee</b></i>.<br/>
+
+To find  <i style="color:red"> Nth highest salary</b></i> is:<br/><br/>
+<div class="panel panel-default">
+  <div class="panel-body"><i style="color:blue"><b>select distinct</b></i>(salary) <i style="color:blue"><b>from </b></i>employee order by salary <i style="color:blue"><b>desc</b></i> limit n-1,1 </div>
+</div><br/>
+ if you want to find <i style="color:red">3rd largest salary</b></i>:<br/><br/>
+ <div class="panel panel-default">
+  <div class="panel-body"><i style="color:blue"><b>select distinct</b></i>(salary) <i style="color:blue"><b>from </b></i>employee order by salary <i style="color:blue"><b>desc</b></i> limit 2,1  </div>
+</div>
+ 
+</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse13" style="text-decoration:none;">13) What is MySQL default port number?</a>
+        </h4>
+      </div>
+      <div id="collapse13" class="panel-collapse collapse">
+        <div class="panel-body">MySQL default port number is<i style="color:green"><b> 3306</b></i>.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse14" style="text-decoration:none;">14) What is REGEXP?</a>
+        </h4>
+      </div>
+      <div id="collapse14" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i style="color:green"><b>REGEXP </b></i>is a pattern match using regular expression. <i style="color:green"><b>Regular expression </b></i>is a powerful way of specifying a pattern for a complex search.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse15" style="text-decoration:none;">15) How many columns can you create for an index?</a>
+        </h4>
+      </div>
+      <div id="collapse15" class="panel-collapse collapse">
+        <div class="panel-body">You can create maximum of  <i style="color:green"><b>16 indexed columns</b></i> for a standard table.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse16" style="text-decoration:none;">16) What is the difference between NOW() and CURRENT_DATE()??</a>
+        </h4>
+      </div>
+      <div id="collapse16" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:green"><b>NOW()</b></i> command is used to show <i style="color:red"><b>current year, month, date with hours, minutes and seconds</b></i> while <i style="color:green"><b>CURRENT_DATE()</b></i> shows the <i style="color:red"><b>current year with month and date</b></i>only.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse17" style="text-decoration:none;">18) What is the use of mysql_close()?</a>
+        </h4>
+      </div>
+      <div id="collapse17" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:green"><b>Mysql_close()</b></i> cannot be used to close the persistent connection. Though it can be used to close connection opened by mysql_connect().</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse18" style="text-decoration:none;">19) What is MySQL data directory?</a>
+        </h4>
+      </div>
+      <div id="collapse18" class="panel-collapse collapse">
+        <div class="panel-body" >
+		MySQL <i style="color:green"><b>data directory</b></i> is a place where MySQL <i style="color:red"><b>stores its data</b></i>. Each subdirectory under this data dictionary represents a MySQL database. By default the information managed my MySQL = server mysqld is stored in data directory.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse19" style="text-decoration:none;">20) What do you mean by % and _ in the LIKE statement?</a>
+        </h4>
+      </div>
+      <div id="collapse19" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:red"><b>%</b></i> corresponds to <i style="color:green"><b>0 or more characters</b></i>,<i style="color:red"><b> _ </b></i>is exactly <i style="color:green"><b>one character </b></i>in the <i style="color:green"><b>LIKE</b></i> statement.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse20" style="text-decoration:none;">21) What Is Primary Key?</a>
+        </h4>
+      </div>
+      <div id="collapse20" class="panel-collapse collapse">
+        <div class="panel-body">
+A <i style="color:green"><b>primary key</b></i> is a single column or multiple columns defined to have <i style="color:green"><b>unique values</b></i> that can be used as <i style="color:green"><b>row identifications</b></i>.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse21" style="text-decoration:none;">22) What Is Foreign Key?</a>
+        </h4>
+      </div>
+      <div id="collapse21" class="panel-collapse collapse">
+        <div class="panel-body">A <i style="color:green"><b>foreign key</b></i> is a single column or multiple columns defined to have values that can be mapped to a primary key in another table.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse22" style="text-decoration:none;">23) What Is Index?</a>
+        </h4>
+      </div>
+      <div id="collapse22" class="panel-collapse collapse">
+        <div class="panel-body">
+		An <i style="color:green"><b>index</b></i> is a single column or multiple columns defined to have values pre-sorted to speed up data retrieval speed
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse23" style="text-decoration:none;">24) What Is Join</a>
+        </h4>
+      </div>
+      <div id="collapse23" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:green"><b>Join</b></i> is data retrieval operation that combines rows from multiple tables under certain matching conditions to form a single row.</div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse24" style="text-decoration:none;">25) What Is Union?</a>
+        </h4>
+      </div>
+      <div id="collapse24" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:green"><b>Join</b></i> is data retrieval operation that combines multiple query outputs of the same structure into a single output. By default the MySQL <i style="color:green"><b>UNION</b></i> <i style="color:red"><b>removes all duplicate</b></i> rows from the result set even if you don’t explicit using DISTINCT after the keyword UNION.</div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse25" style="text-decoration:none;">26) What Is Commit?</a>
+        </h4>
+      </div>
+      <div id="collapse25" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:green"><b>Commit</b></i> is a way to terminate a transaction with all database changes to be <i style="color:green"><b>saved permanently</b></i> to the database server.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse26" style="text-decoration:none;">27)  What Is Rollback?</a>
+        </h4>
+      </div>
+      <div id="collapse26" class="panel-collapse collapse">
+        <div class="panel-body">
+		<i style="color:green"><b>Rollback</b></i> is a way to terminate a transaction with all database changes not saving to the database server.
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse27" style="text-decoration:none;">28) How To Use Like Conditions?</a>
+        </h4>
+      </div>
+      <div id="collapse27" class="panel-collapse collapse">
+        <div class="panel-body">
+A <i style="color:green"><b>LIKE</b></i> condition is also called pattern patch. There are 3 main rules on using LIKE condition:<br/><br/>
+
+1) is used in the pattern to match any one character.<br/>
+2)<i style="color:green"><b> %</b></i> is used in the pattern to match any zero or more characters.<br/>
+3) <i style="color:green"><b>ESCAPE</b></i> clause is used to provide the escape character in the pattern.<br/></div>
+      </div>
+    </div>
+	<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse28" style="text-decoration:none;">29) How To Add A New Column To An Existing Table In Mysql?</a>
+        </h4>
+      </div>
+      <div id="collapse28" class="panel-collapse collapse">
+        <div class="panel-body" ><i style="color:blue"><b>ALTER TABLE</b></i> tip <i style="color:red"><b>ADD</b></i> COLUMN author <i style="color:blue"><b>VARCHAR(40)</b></i>; </div>
+      </div>
+    </div>
+	
+	 <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse29" style="text-decoration:none;">30) How To Delete An Existing Column In A Table?</a>
+        </h4>
+      </div>
+      <div id="collapse29" class="panel-collapse collapse">
+        <div class="panel-body"><i style="color:blue"><b>ALTER TABLE/</b></i> tip <i style="color:red"><b>DROP COLUMN</b></i> create_date; </div>
+      </div>
+    </div>
+    
+	
+  </div> 
+</div>
+    
+</body>
+</html>
